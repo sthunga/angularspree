@@ -34,8 +34,9 @@ export class ProductListComponent implements OnInit {
     this.store.dispatch(this.checkoutActions.addToCart(variant_id));
   }
 
-  getMargin() {
-    return this.toggleLayout.size === 'COZY' ? '0 0px 20px 0' : '0 80px 20px 0';
+  getColSize() {
+    const isCozy = this.toggleLayout.size === 'COZY';
+    return { 'col-sm-4 col-lg-3 mb-2': isCozy, 'col-sm-6 col-lg-4 mb-5': !isCozy };
   }
 
 }
