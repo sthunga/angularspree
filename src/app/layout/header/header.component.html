@@ -2,10 +2,7 @@
   <div class="col-md-12">
     <nav class="navbar navbar-expand-lg navbar-light bg-white justify-content-between">
       <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="assets/logo.png" alt="Angular Spree">
-        </a>
-        <div class="btn-group ml-auto" placement="left" dropdown>
+        <div class="btn-group float-left" placement="left" dropdown>
           <button dropdownToggle type="button" class="navbar-toggler">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -17,6 +14,24 @@
             </li>
           </ul>
         </div>
+        <a class="navbar-brand" href="#">
+          <img src="assets/logo.png" alt="Angular Spree">
+        </a>
+        <div class="btn-group float-left" placement="left" dropdown>
+          <button dropdownToggle type="button" class="navbar-toggler">
+            <span class="search-icon"></span>
+          </button>
+          <ul *dropdownMenu class="dropdown-menu" role="menu">
+            <li class="nav-item">
+            <form class="form-inline">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            </form>
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="hidden-sm-up">
+          <app-profile-dropdown [totalCartItems]="totalCartItems | async" [isAuthenticated]="isAuthenticated | async"></app-profile-dropdown>
+        </div>   -->
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mr-auto">
             <li *ngFor="let taxon of taxonList" class="nav-item">
