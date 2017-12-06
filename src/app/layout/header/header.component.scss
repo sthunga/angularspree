@@ -9,7 +9,7 @@ nav {
     /deep/ .dropdown-menu {
       left: 0 !important;
       top: 0% !important;
-      margin-top: 10%;
+      margin-top: 20%;
       position: fixed;
       width: 100vw;
       background: white;
@@ -145,4 +145,11 @@ nav {
   width: 21px;
   height: 21px;
   display: block;
+}
+.tab-down {
+  a {
+    font-size: 20px;
+    &:hover {
+    }
+  }
 }

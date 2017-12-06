@@ -29,9 +29,13 @@
             </li>
           </ul>
         </div>
-        <!-- <div class="hidden-sm-up">
-          <app-profile-dropdown [totalCartItems]="totalCartItems | async" [isAuthenticated]="isAuthenticated | async"></app-profile-dropdown>
-        </div>   -->
+        <div class="tab-down"> 
+            <a href="#" class="mr-3" [routerLink]="['/auth', 'login']">
+              <i class="fa fa-user" aria-hidden="true"></i>
+            </a>
+              <a href="#" class="" [routerLink]="['checkout','cart']">
+                <i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+        </div>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mr-auto">
             <li *ngFor="let taxon of taxonList" class="nav-item">
